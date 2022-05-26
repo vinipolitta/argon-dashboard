@@ -25,8 +25,8 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
 
     this.datasets = [
-      [0, 20, 10, 30, 15, 40, 20, 60, 60],
-      [0, 20, 5, 25, 10, 30, 15, 40, 40]
+      [0, 5, 10, 30, 15, 40, 20, 60, 60],
+      [0, 20, 5, 25, 10, 30, 15, 40, 4]
     ];
     this.data = this.datasets[0];
 

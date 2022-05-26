@@ -13,6 +13,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { HomeComponent } from './pages/home/home.component';
+import { AboutComponent } from './pages/about/about.component';
+import { PageDefaultComponent } from './shared/page-default/page-default.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { HomeComponent } from './pages/home/home.component';
     AppComponent,
     AdminLayoutComponent,
     AuthLayoutComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent,
+    PageDefaultComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
