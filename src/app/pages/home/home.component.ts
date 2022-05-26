@@ -1,3 +1,4 @@
+import { ElementService } from "./../../services/element/element.service";
 import { element } from "protractor";
 import { Component, OnInit } from "@angular/core";
 
@@ -8,13 +9,12 @@ import { Component, OnInit } from "@angular/core";
 })
 export class HomeComponent implements OnInit {
   element_html;
-  constructor() {}
+  constructor(private elementService: ElementService) {}
 
   ngOnInit(): void {
     this.getElementPage();
   }
   getElementPage(): void {
-    var elementRef = document.querySelector(".pageHome");
-    this.element_html = elementRef.innerHTML;
+    this.element_html = this.elementService.getElement(".pageHome");
   }
 }

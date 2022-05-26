@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ElementService } from 'src/app/services/element/element.service';
 
 @Component({
   selector: 'app-about',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+  element_html;
 
-  constructor() { }
+  constructor(private elementService: ElementService) { }
 
   ngOnInit(): void {
+    this.getElementPage();
+  }
+
+  getElementPage(): void {
+    this.element_html = this.elementService.getElement(".pageAbout");
   }
 
 }
