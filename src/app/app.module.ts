@@ -15,6 +15,7 @@ import { ComponentsModule } from './components/components.module';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { PageDefaultComponent } from './shared/page-default/page-default.component';
+import { RestaurantComponent } from './pages/restaurant/restaurant.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { PageDefaultComponent } from './shared/page-default/page-default.compone
     AuthLayoutComponent,
     HomeComponent,
     AboutComponent,
-    PageDefaultComponent
+    PageDefaultComponent,
+    RestaurantComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
