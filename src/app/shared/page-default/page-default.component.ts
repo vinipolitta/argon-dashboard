@@ -9,10 +9,14 @@ export class PageDefaultComponent implements OnInit {
   @Input() element_html = `<div>
   <h2>VAMos la</h2>
   </div>`;
+  @Input() showTableDark ;
+  @Input() showPageContent = false;
 
-  @Input() showCardsCharts = true;
+  @Input() showCardsCharts = false;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.showTableDark === 'dark' ? false : true;
+  }
 }

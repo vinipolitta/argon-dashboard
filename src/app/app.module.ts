@@ -16,6 +16,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { PageDefaultComponent } from './shared/page-default/page-default.component';
 import { RestaurantComponent } from './pages/restaurant/restaurant.component';
+import { TablesComponent } from './pages/tables/tables.component';
+import { TableGenericComponent } from './shared/table-generic/table-generic.component';
 
 
 @NgModule({
@@ -35,7 +37,10 @@ import { RestaurantComponent } from './pages/restaurant/restaurant.component';
     HomeComponent,
     AboutComponent,
     PageDefaultComponent,
-    RestaurantComponent
+    RestaurantComponent,
+    TablesComponent,
+    TableGenericComponent
+
   ],
   providers: [],
   bootstrap: [AppComponent]
