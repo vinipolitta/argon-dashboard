@@ -1,6 +1,7 @@
 import { ElementService } from "./../../services/element/element.service";
 import { element } from "protractor";
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-home",
@@ -9,12 +10,12 @@ import { Component, OnInit } from "@angular/core";
 })
 export class HomeComponent implements OnInit {
   element_html;
-  constructor(private elementService: ElementService) {}
+  constructor(private elementService: ElementService, private router: Router) {}
 
   ngOnInit(): void {
-    this.getElementPage();
   }
-  getElementPage(): void {
-    this.element_html = this.elementService.getElement(".pageHome");
+
+  changePage() {
+    this.router.navigateByUrl('/restaurant')
   }
 }
