@@ -1,3 +1,4 @@
+import { Restaurants } from "./../interfaces/restaurants";
 import { Component, Input, OnInit } from "@angular/core";
 
 @Component({
@@ -9,16 +10,10 @@ export class TableGenericComponent implements OnInit {
   @Input() titleTable: string = "Default";
   @Input() isTheme;
 
- @Input() coluns = [];
+  @Input() coluns;
 
-  @Input() dataTable = [];
+  @Input() restaurants: Restaurants;
   constructor() {}
 
-  ngOnInit(): void {
-    this.themeTable();
-  }
-
-  themeTable() {
-    console.log(this.isTheme);
-  }
+  ngOnInit(): void {}
 }

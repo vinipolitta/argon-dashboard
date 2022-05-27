@@ -1,45 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-restaurant',
-  templateUrl: './restaurant.component.html',
-  styleUrls: ['./restaurant.component.css']
+  selector: "app-restaurant",
+  templateUrl: "./restaurant.component.html",
+  styleUrls: ["./restaurant.component.css"],
 })
 export class RestaurantComponent implements OnInit {
-  dataTable = [
+  restaurants = [
     {
-      title: "Argon Design System",
-      img: "../assets/img/theme/bootstrap.jpg",
-      budget: "$2,500 USD",
-      status: "pending",
-      iconStatus:'bg-info',
-
-      complete: '30%'
+      id: "bread-bakery",
+      name: "Bread & Bakery",
+      category: "Bakery",
+      deliveryEstimate: "25m",
+      rating: 4.9,
+      imagePath: "assets/img/restaurants/breadbakery.png",
+      iconStatus: "bg-info",
     },
     {
-      title: "teste Design System",
-      img: "../assets/img/theme/bootstrap.jpg",
-      budget: "$2,500 USD",
-      status: "finish",
-      iconStatus:'bg-success',
-
-      complete: '60%'
-    },
-    {
-      title: "Argon teste System",
-      img: "../assets/img/theme/bootstrap.jpg",
-      budget: "$2,500 USD",
-      status: "paused",
-      iconStatus:'bg-warning',
-
-      complete: '80%'
+      id: "burger-house",
+      name: "Burger House",
+      category: "Hamburgers",
+      deliveryEstimate: "100m",
+      rating: 3.5,
+      imagePath: "assets/img/restaurants/burgerhouse.png",
+      iconStatus: "bg-warning",
     },
   ];
 
-  coluns = ["Project", "Budget", "Status", "Completion", "action"];
-  constructor() { }
+  coluns = ["Name", "Rating", "Category", "Delivery Estimate", "Actions"];
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
